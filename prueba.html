@@ -1,0 +1,11 @@
+<script>
+    function cambiarTamanoEjemplo(){
+    var tam=document.getElementById("tamanoTxt").value;
+    alert(tam);
+    document.getElementById("ejemploTexto").style.fontSize = tam + "em";
+}
+</script> 
+
+<input type="range" id="tamanoTxt" min="1" max="5" onchange="cambiarTamanoEjemplo()"><br>
+            
+            <label id="ejemploTexto">Ejemplo</label><br>

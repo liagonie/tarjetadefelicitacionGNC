@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/javascript.js"></script>
+        <title>Tarjeta de felicitación</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Modak&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <article id="contenido">
+            <h1>Creando una tarjeta</h1>
+            <h2>Elige un tema</h2>
+            <div id="imagen1">
+                <img src="img/sanValentin.jpg" alt="San valentin" ><br>
+            
+                <input type="radio" name="tipoImg1" id="tipoImg1"  value="img/sanValentin.jpg">
+                <label>San Valentin</label>
+            </div>
+            
+             <div id="imagen2">
+                 <img src="img/felizCumple.jpg" alt="Feliz Cumpleaños"><br>
+            
+                 <input type="radio" name="tipoImg2" id="tipoImg2" value="img/felizCumple.jpg" checked>
+                 <label>Feliz Cumpleaños</label>
+            </div>
+            
+             <div id="imagen3">
+                 <img src="img/Motivation.jpg" alt="Motivación"><br>
+                 
+                 <input type="radio" name="tipoImg3" id="tipoImg3" value="img/Motivation.jpg">
+                 <label>Motivación</label>
+            </div>
+           
+            
+            
+            <h2 id="tit">Agregar un titulo</h2>
+            <input type="text" id="tituloTxt">
+            <h2>Agregar una descripción</h2>
+            <!--cols=columnas-->
+            <textarea id="descripconT" cols="30" rows="10"></textarea>
+            
+            <h2>Formato de texto</h2>
+            <!--Se vincula el label con el id del input-->
+            <label for="colorTxt">Color:</label>
+            <input type="color" id="colorTxt"><br>
+            
+            <label for="colorTxt">Tamaño de letra</label>
+            
+            <!--range es una barra con minimo y maximo-->
+            <input type="range" id="tamanoTxt" min="1" max="5" onchange="cambiarTamanoEjemplo()">
+            <br>
+            <label id="ejemploTexto">Ejemplo</label><br>
+            
+            
+            
+            <label>Tipografía</label><br>
+            <!--tipografia1-->
+            <input type="radio" name="tipoTxt" id="tipoTxt1" checked value="Lobster">
+            <label id="tipo1">Lobster</label><br>
+            <!--tipografia2-->
+            <input type="radio" name="tipoTxt" id="tipoTxt2" value="Modak">
+            <label id="tipo2">Modak</label><br>
+            <!--tipografia3-->
+            <input type="radio" name="tipoTxt" id="tipoTxt3" value="Bangers">
+            <label id="tipo3">Bangers</label><br><br>
+            <img src="img/brush-pencil-icon.png" onclick="generarTarjeta()" id="icon">
+        </article>
+        
+        <article id="tarjeta">
+            <a href="index.html" id="boton"><button>Volver al inicio</button></a>
+            <h1 id="titulo"></h1>
+            <h2 id="descripcion"></h2>
+        </article>
+    </body>
+</html>
